@@ -1,6 +1,7 @@
 package test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -11,7 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ShopPageTest extends BaseTest {
-
     HomePage homePage;
     ShopPage shopPage;
 
@@ -23,13 +23,12 @@ public class ShopPageTest extends BaseTest {
 
 
 
-    @BeforeTest
-    public void setUpBeforeClass(){
+    @BeforeMethod
+    public void setUp(){
          homePage = new HomePage(driver);
          shopPage = new ShopPage(driver);
 
     }
-
 
     @Test(priority = 1)
     public void verifyProductNumber(){
@@ -38,8 +37,7 @@ public class ShopPageTest extends BaseTest {
         Assert.assertEquals(shopPage.getProductsNumber(),12);
     }
 
-
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void verifySortProducts(){
         shopPage = homePage.goToShopPage();
         Assert.assertEquals(shopPage.getProductsNameAfterOrderByPrice(), correctProductListSortByPriceFromLowest);

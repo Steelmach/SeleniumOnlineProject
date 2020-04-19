@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -18,13 +19,22 @@ public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
     public static Properties prop;
-
+    public static Properties testdata;
 
     public BaseTest(){
         try {
             prop = new Properties();
-            FileInputStream file = new FileInputStream(System.getProperty("user.dir")+ "/src/test/java/config/config.properties");
+            FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/test/java/config/config.properties");
             prop.load(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            testdata = new Properties();
+            FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/test/java/testdata/testdata.properties");
+            testdata.load(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -39,7 +49,7 @@ public class BaseTest {
 
         if(prop.getProperty("browser").equalsIgnoreCase("chrome")){
 
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--incognito");
@@ -49,13 +59,14 @@ public class BaseTest {
 
         }
         else if(prop.getProperty("browser").equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/resources/geckodriver.exe");
             driver = new FirefoxDriver();
         }
+
         else if(prop.getProperty("browser").equalsIgnoreCase("ie")){
-
+            System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "/src/main/resources/IEDriverServer.exe");
+            driver= new InternetExplorerDriver();
         }
-
 
 
         driver.manage().deleteAllCookies();

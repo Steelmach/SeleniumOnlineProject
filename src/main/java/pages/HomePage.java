@@ -9,9 +9,7 @@ public class HomePage  extends  BasePage{
 
     /**** repozytorium elementów ****/
     @FindBy(xpath = "//a[@href='http://www.selenium-shop.pl/sklep/']")
-    private WebElement shoptMenu;
-
-
+    private WebElement shopMenu;
 
     private String loginPageURL = "http://www.selenium-shop.pl/moje-konto/";
 
@@ -23,7 +21,7 @@ public class HomePage  extends  BasePage{
 
     /****  metody  ****/
     public ShopPage goToShopPage(){
-        shoptMenu.click();
+        shopMenu.click();
         return new ShopPage(driver);
     }
 

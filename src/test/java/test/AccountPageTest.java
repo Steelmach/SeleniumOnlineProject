@@ -15,20 +15,19 @@ import pages.OrderConfirmedPage;
 public class AccountPageTest extends BaseTest {
     LoginPage loginPage;
     AccountPage accountPage;
-    String correctLogin = "UserTest2";
-    String correctPassword = "HasloTestowe2";
 
     @BeforeTest
     public void setUpBeforeClass(){
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
 
+        accountPage = loginPage.login(testdata.getProperty("userLogin"),testdata.getProperty("userPassword"));
     }
 
 
    @Test(priority = 1)
   public void verifyNameAccountAfterLogin(){
-        accountPage = loginPage.login(correctLogin,correctPassword);
+
 
         Assert.assertEquals(accountPage.getNameAccount(), "Jan Testowy2",
                 "Nie jesteś zalogowany na własciwe konto!");
