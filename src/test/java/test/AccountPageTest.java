@@ -28,7 +28,7 @@ public class AccountPageTest extends BaseTest {
 
    @Test(priority = 1)
   public void verifyNameAccountAfterLogin(){
-        accountPage = loginPage.login(correctLogin,);
+        accountPage = loginPage.login(correctLogin,correctPassword);
 
         Assert.assertEquals(accountPage.getNameAccount(), "Jan Testowy2",
                 "Nie jesteś zalogowany na własciwe konto!");

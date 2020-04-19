@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="" />
+    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/geckodriver.exe" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1agc2I473JusZ7ywjvz96jXvtw8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kursseleniumRepozytorium" />
     <property name="project.structure.last.edited" value="Project" />
