@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddressPage extends  BasePage{
 
+
     /**** repozytorium elementów ****/
    @FindBy(xpath = "//h3[contains(text(),'wysyłki')]//parent::*//parent::*/address")
    private WebElement infoDeliveryAddress;
@@ -26,18 +27,22 @@ public class AddressPage extends  BasePage{
         PageFactory.initElements(driver, this);
     }
 
+
     /****  metody  ****/
+    // Przejście do strony z dodaniem/edytowaniem adresy dostowy
+    public DeliveryAddressDetailsPage goToAddDeliveryAddress(){
+        addDeliveryAddress.click();
+        return new DeliveryAddressDetailsPage(driver);
+    }
+
+    // Pobranie i zwrócenie komunikatu dotyczącego istnienia adresy dostawy
    public String getInfoDeliveryAddress(){
        String message = infoDeliveryAddress.getText();
-       System.out.println("Message delivery address: " + message);
+       System.out.println("Komunikat adres dostawy: " + message);
        return message;
    }
 
-   public DeliveryAddressDetailsPage goToAddDeliveryAddress(){
-       addDeliveryAddress.click();
-       return new DeliveryAddressDetailsPage(driver);
-   }
-
+    // Pobranie i zwrócenie adresu dostawy
    public String getDeliveryAddress(){
        String address = deliveryAddress.getText();
        return address;

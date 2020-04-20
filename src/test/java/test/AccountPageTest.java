@@ -1,15 +1,9 @@
 package test;
 
 import org.testng.Assert;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.AccountPage;
-import pages.AddressPage;
 import pages.LoginPage;
-import pages.OrderConfirmedPage;
 
 
 public class AccountPageTest extends BaseTest {
