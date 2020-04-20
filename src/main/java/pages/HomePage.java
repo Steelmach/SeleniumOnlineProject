@@ -21,9 +21,9 @@ public class HomePage  extends  BasePage{
 
     /****  metody  ****/
     // Przejście na stronę sklepu z produktami
-    public ShopPage goToShopPage(){
+    public ProductListPage goToProductPage(){
         shopMenu.click();
-        return new ShopPage(driver);
+        return new ProductListPage(driver);
     }
 
     // Pobranie i zwrócenie aktualnego tytułu strony

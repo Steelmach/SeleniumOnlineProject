@@ -1,45 +1,38 @@
 package test;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-import pages.AccountPage;
-import pages.AddressPage;
-import pages.DeliveryAddressDetailsPage;
-import pages.LoginPage;
+import org.testng.annotations.*;
+import pages.*;
 
 public class DeliveryAddressDetailsPageTest extends BaseTest{
     LoginPage loginPage;
     AccountPage accountPage;
     AddressPage addressPage;
-    DeliveryAddressDetailsPage billingAddressDetailsPage;
-
-    String correctLogin = "UserTest2";
-    String correctPassword = "HasloTestowe2";
+    DeliveryAddressDetailsPage deliveryAddressDetailsPage;
 
     @BeforeTest
-    public void setUpBeforeClass(){
+    public void prepareTest(){
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
         addressPage = new AddressPage(driver);
-        billingAddressDetailsPage = new DeliveryAddressDetailsPage(driver);
-    }
+        deliveryAddressDetailsPage = new DeliveryAddressDetailsPage(driver);
 
-
-    @Test(priority = 1)
-    public void addDeliveryAddress() {
-        accountPage = loginPage.login(correctLogin, correctPassword);
-
+        accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
         addressPage = accountPage.goToAddresses();
-
-        billingAddressDetailsPage = addressPage.goToAddDeliveryAddress();
-
-        addressPage = billingAddressDetailsPage.fillForm("Jan","Testowy2","Polska",
-                                        "Słoneczna","00-001","Warszawa");
-
+        deliveryAddressDetailsPage = addressPage.goToAddDeliveryAddress();
 
     }
 
+
+    @Test(priority = 0)
+    public void addDeliveryAddress() {
+        addressPage = deliveryAddressDetailsPage.fillForm("Jan","Testowy2","Polska",
+                "Słoneczna","00-001","Warszawa");
+
+        Assert.assertEquals(addressPage.getInfoDeliveryAddress(),
+                "Jan Testowy2\n" +
+                "Polska\n" +
+                "00-001 Warszawa");
+    }
 
 }

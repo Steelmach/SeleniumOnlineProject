@@ -1,28 +1,24 @@
 package test;
-
+import pages.*;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-import pages.*;
 
 public class LoginPageTest extends BaseTest {
     LoginPage loginPage;
 
 
     @BeforeTest
-    public void setUpBeforeClass(){
+    public void prepareTest(){
         loginPage = new LoginPage(driver);
     }
 
 
-    @Test
+    @Test(priority = 0)
     public void verifyPageTitle(){
-
-        Assert.assertTrue(loginPage.getPageTitle().equals(testdata.getProperty("loginPageCorrectPageTitle")));
+        Assert.assertTrue(loginPage.getPageTitle().equals(testdata.getProperty("correctLoginPageTitle")));
     }
+
 
 }

@@ -2,16 +2,16 @@ package test;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pages.AccountPage;
-import pages.LoginPage;
+import pages.*;
 
 
 public class AccountPageTest extends BaseTest {
     LoginPage loginPage;
     AccountPage accountPage;
 
+
     @BeforeTest
-    public void setUpBeforeClass(){
+    public void prepareTest(){
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
 
@@ -19,12 +19,10 @@ public class AccountPageTest extends BaseTest {
     }
 
 
-   @Test(priority = 1)
+   @Test(priority = 0)
   public void verifyNameAccountAfterLogin(){
-
-
-        Assert.assertEquals(accountPage.getNameAccount(), "Jan Testowy2",
-                "Nie jesteś zalogowany na własciwe konto!");
+        Assert.assertEquals(accountPage.getNameAccount(), testdata.getProperty("correctNameAccount"),
+                "Nie jesteś zalogowany na własciwe konto! Proszę o wylogowanie się");
    }
 
 

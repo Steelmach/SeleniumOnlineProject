@@ -1,42 +1,34 @@
 package test;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-import pages.AccountPage;
-import pages.AddressPage;
-import pages.LoginPage;
-import pages.OrderConfirmedPage;
+import org.testng.annotations.*;
+import pages.*;
+
 
 public class AddressPageTest extends BaseTest{
     LoginPage loginPage;
     AccountPage accountPage;
     AddressPage addressPage;
 
-    String correctLogin = "UserTest2";
-    String correctPassword = "HasloTestowe2";
-    String correctInfoAboutDeliveryAddress = "Nie ustawiłeś jeszcze tego adresu.";
+
+
 
     @BeforeTest
-    public void setUpBeforeClass(){
+    public void prepareTest(){
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
         addressPage = new AddressPage(driver);
-    }
 
-
-    @Test(priority = 1)
-    public void verifyNoDeliveryAddress() {
-        accountPage = loginPage.login(correctLogin, correctPassword);
-
+        accountPage = loginPage.login(testdata.getProperty("userLogin"),testdata.getProperty("userPassword"));
         addressPage = accountPage.goToAddresses();
-
-        Assert.assertTrue(addressPage.getInfoDeliveryAddress().equalsIgnoreCase(correctInfoAboutDeliveryAddress));
-
     }
 
 
+    @Test(priority = 0)
+    public void verifyNoDeliveryAddress() {
+        Assert.assertTrue(addressPage.getInfoDeliveryAddress().equalsIgnoreCase
+                (testdata.getProperty("correctInfoAboutDeliveryAddress")));
 
+    }
 
 }

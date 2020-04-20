@@ -21,12 +21,12 @@ public class OrderConfirmedPage extends BasePage{
         PageFactory.initElements(driver, this);
     }
 
-    
+
     /****  metody  ****/
     // Pobranie i zwrócenie komunikatu o liczbie złożonych zamówień
     public String getInfoAboutOrders(){
         String message = infoAboutOrders.getText();
-        System.out.println("Komunikat dotyczący ilośc złożonych zamówień " + message);
+        System.out.println("Komunikat dotyczący ilośc złożonych zamówień: " + message);
         return message;
     }
 

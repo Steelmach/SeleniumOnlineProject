@@ -34,7 +34,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ShopPageTest">
+  <component name="RunManager" selected="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml">
     <configuration name="AccountPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
       <extension name="coverage">
@@ -77,9 +77,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/newUser_addProductToCart.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/newUser_addProductToCart.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/AllTest_FrameworkPOM.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -87,17 +87,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryAddressDetailsPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/newUser_addProductToCart.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DeliveryAddressDetailsPageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/newUser_addProductToCart.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -121,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderConfirmedPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +123,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ShopPageTest" />
+      <option name="MAIN_CLASS_NAME" value="test.OrderConfirmedPageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -140,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ShopPageTest" />
-        <item itemvalue="TestNG.LoginPageTest" />
+        <item itemvalue="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml" />
         <item itemvalue="TestNG.AccountPageTest" />
+        <item itemvalue="TestNG.LoginPageTest" />
+        <item itemvalue="TestNG.OrderConfirmedPageTest" />
         <item itemvalue="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/newUser_addProductToCart.xml" />
-        <item itemvalue="TestNG.DeliveryAddressDetailsPageTest" />
       </list>
     </recent_temporary>
   </component>
