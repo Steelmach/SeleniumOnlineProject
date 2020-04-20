@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -73,9 +72,13 @@ public class BaseTest {
             driver= new InternetExplorerDriver();
         }
 
+        if(prop.getProperty("deleteAllCookies").equalsIgnoreCase("true")) {
+            driver.manage().deleteAllCookies();
+        }
+        if(prop.getProperty("windowsMaximize").equalsIgnoreCase("true")){
+            driver.manage().window().maximize();
+        }
 
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(prop.getProperty("pageLoadTimeout")), TimeUnit.SECONDS);
 
         driver.get(prop.getProperty("URL"));
