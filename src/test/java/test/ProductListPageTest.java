@@ -3,9 +3,13 @@ package test;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.*;
-import java.util.*;
 
-public class ProductListPageTest extends BaseTest {
+import base.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ProductListPageTest extends TestBase {
     HomePage homePage;
     ProductListPage productListPage;
 
@@ -17,8 +21,8 @@ public class ProductListPageTest extends BaseTest {
 
     @BeforeMethod
     public void prepareTest(){
-        homePage = new HomePage(driver);
-        productListPage = new ProductListPage(driver);
+        homePage = new HomePage();
+        productListPage = new ProductListPage();
 
         productListPage = homePage.goToProductPage();
     }

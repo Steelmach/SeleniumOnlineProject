@@ -1,12 +1,13 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class AddressPage extends  BasePage{
+public class AddressPage extends TestBase {
 
 
     /**** repozytorium elementów ****/
@@ -22,8 +23,7 @@ public class AddressPage extends  BasePage{
 
 
     /**** konstruktor ****/
-    public AddressPage(WebDriver driver){
-        super(driver);
+    public AddressPage(){
         PageFactory.initElements(driver, this);
     }
 
@@ -32,7 +32,7 @@ public class AddressPage extends  BasePage{
     // Przejście do strony z dodaniem/edytowaniem adresy dostowy
     public DeliveryAddressDetailsPage goToAddDeliveryAddress(){
         addDeliveryAddress.click();
-        return new DeliveryAddressDetailsPage(driver);
+        return new DeliveryAddressDetailsPage();
     }
 
     // Pobranie i zwrócenie komunikatu dotyczącego istnienia adresy dostawy

@@ -1,12 +1,13 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class HomePage  extends  BasePage{
+public class HomePage  extends TestBase {
 
     /**** repozytorium elementów ****/
     @FindBy(xpath = "//a[@href='http://www.selenium-shop.pl/sklep/']")
@@ -14,8 +15,7 @@ public class HomePage  extends  BasePage{
 
 
     /**** konstruktor ****/
-    public HomePage(WebDriver driver){
-        super(driver);
+    public HomePage(){
         PageFactory.initElements(driver, this);
     }
 
@@ -23,7 +23,7 @@ public class HomePage  extends  BasePage{
     // Przejście na stronę sklepu z produktami
     public ProductListPage goToProductPage(){
         shopMenu.click();
-        return new ProductListPage(driver);
+        return new ProductListPage();
     }
 
     // Pobranie i zwrócenie aktualnego tytułu strony

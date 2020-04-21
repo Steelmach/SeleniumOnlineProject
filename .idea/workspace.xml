@@ -30,6 +30,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/config" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kursseleniumRepozytorium" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -59,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml">
+  <component name="RunManager" selected="TestNG.LoginPageTest">
     <configuration name="AccountPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
       <extension name="coverage">
@@ -133,9 +134,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginPageTest" />
         <item itemvalue="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml" />
         <item itemvalue="TestNG.AccountPageTest" />
-        <item itemvalue="TestNG.LoginPageTest" />
         <item itemvalue="TestNG.OrderConfirmedPageTest" />
         <item itemvalue="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/newUser_addProductToCart.xml" />
       </list>

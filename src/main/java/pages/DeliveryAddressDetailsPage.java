@@ -1,5 +1,6 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class DeliveryAddressDetailsPage extends BasePage{
+public class DeliveryAddressDetailsPage extends TestBase {
 
 
     /**** repozytorium elementów ****/
@@ -37,8 +38,7 @@ public class DeliveryAddressDetailsPage extends BasePage{
 
 
     /**** konstruktor ****/
-    public DeliveryAddressDetailsPage(WebDriver driver){
-       super(driver);
+    public DeliveryAddressDetailsPage(){
         PageFactory.initElements(driver, this);
     }
 
@@ -97,7 +97,7 @@ public class DeliveryAddressDetailsPage extends BasePage{
         setPostcode(postcodeStr);
         setCity(cityStr);
         clickSaveAddressButton();
-        return new AddressPage(driver);
+        return new AddressPage();
     }
 
 }

@@ -1,5 +1,6 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductListPage extends BasePage {
+public class ProductListPage extends TestBase {
 
     /**** repozytorium elementów ****/
     @FindBy(xpath = "//ul[contains(@class,'products')]/li")
@@ -23,8 +24,7 @@ public class ProductListPage extends BasePage {
 
 
     /**** konstruktor ****/
-    public ProductListPage(WebDriver driver) {
-        super(driver);
+    public ProductListPage() {
         PageFactory.initElements(driver, this);
 
 

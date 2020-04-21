@@ -3,9 +3,10 @@ package test;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.*;
+import base.*;
 
 
-public class OrderConfirmedPageTest extends BaseTest {
+public class OrderConfirmedPageTest extends TestBase {
     LoginPage loginPage;
     AccountPage accountPage;
     OrderConfirmedPage orderConfirmedPage;
@@ -13,9 +14,9 @@ public class OrderConfirmedPageTest extends BaseTest {
 
     @BeforeTest
     public void prepareTest(){
-        loginPage = new LoginPage(driver);
-        accountPage = new AccountPage(driver);
-        orderConfirmedPage = new OrderConfirmedPage(driver);
+        loginPage = new LoginPage();
+        accountPage = new AccountPage();
+        orderConfirmedPage = new OrderConfirmedPage();
 
         accountPage = loginPage.login(testdata.getProperty("userLogin"),testdata.getProperty("userPassword"));
         accountPage.goToOrders();

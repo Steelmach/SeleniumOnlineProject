@@ -1,12 +1,13 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class OrderConfirmedPage extends BasePage{
+public class OrderConfirmedPage extends TestBase {
 
 
     /**** repozytorium elementów ****/
@@ -16,8 +17,7 @@ public class OrderConfirmedPage extends BasePage{
 
 
     /**** konstruktor ****/
-    public OrderConfirmedPage(WebDriver driver){
-        super(driver);
+    public OrderConfirmedPage(){
         PageFactory.initElements(driver, this);
     }
 

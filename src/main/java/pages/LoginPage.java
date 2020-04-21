@@ -1,15 +1,15 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 
-public class LoginPage extends BasePage{
+public class LoginPage extends TestBase {
 
 
     /**** repozytorium elementów ****/
@@ -28,8 +28,7 @@ public class LoginPage extends BasePage{
 
 
     /**** konstruktor ****/
-    public LoginPage(WebDriver driver){
-        super(driver);
+    public LoginPage(){
         PageFactory.initElements(driver, this);
     }
 
@@ -38,7 +37,7 @@ public class LoginPage extends BasePage{
     public LoginPage goToLoginPage(){
         wait.until(visibilityOf(myAccountMenu));
         myAccountMenu.click();
-        return new LoginPage(driver);
+        return new LoginPage();
     }
 
     // Pobranie i zwrócienie aktualnego tytułu strony
@@ -76,7 +75,7 @@ public class LoginPage extends BasePage{
         setPasswordInput(password);
         clickLoginButton();
 
-        return new AccountPage(driver);
+        return new AccountPage();
     }
 
 }

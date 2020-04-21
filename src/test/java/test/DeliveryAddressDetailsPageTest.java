@@ -3,8 +3,9 @@ package test;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.*;
+import base.*;
 
-public class DeliveryAddressDetailsPageTest extends BaseTest{
+public class DeliveryAddressDetailsPageTest extends TestBase{
     LoginPage loginPage;
     AccountPage accountPage;
     AddressPage addressPage;
@@ -12,10 +13,10 @@ public class DeliveryAddressDetailsPageTest extends BaseTest{
 
     @BeforeTest
     public void prepareTest(){
-        loginPage = new LoginPage(driver);
-        accountPage = new AccountPage(driver);
-        addressPage = new AddressPage(driver);
-        deliveryAddressDetailsPage = new DeliveryAddressDetailsPage(driver);
+        loginPage = new LoginPage();
+        accountPage = new AccountPage();
+        addressPage = new AddressPage();
+        deliveryAddressDetailsPage = new DeliveryAddressDetailsPage();
 
         accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
         addressPage = accountPage.goToAddresses();
