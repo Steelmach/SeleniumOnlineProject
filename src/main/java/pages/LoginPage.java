@@ -1,7 +1,6 @@
 package pages;
 
 import base.TestBase;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -31,6 +30,7 @@ public class LoginPage extends TestBase {
     public LoginPage(){
         PageFactory.initElements(driver, this);
     }
+
 
     /****  metody  ****/
     // Przejście na zakładkę Moje Konto - zakładka z logowaniem

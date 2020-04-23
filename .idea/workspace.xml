@@ -2,7 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/geckodriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extensions/DriverFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AddressPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DeliveryAddressDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DeliveryAddressDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/OrderConfirmedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OrderConfirmedPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/AccountPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/AccountPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/AddressPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/AddressPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/DeliveryAddressDetailsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/DeliveryAddressDetailsPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/HomePageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/LoginPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/OrderConfirmedPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/OrderConfirmedPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/ProductListPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/ProductListPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/TestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/extensions/DriverFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/AccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/AccountPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/AddressPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/AddressPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/DeliveryAddressDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/DeliveryAddressDetailsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/OrderConfirmedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/OrderConfirmedPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/ProductListPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/ProductListPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/AccountPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/AccountPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/AddressPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/AddressPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/DeliveryAddressDetailsPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/DeliveryAddressDetailsPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/HomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/HomePageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/LoginPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/LoginPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/OrderConfirmedPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/OrderConfirmedPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test/ProductListPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/ProductListPageTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +53,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -30,6 +68,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/config" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../kursseleniumRepozytorium" />
     <property name="project.structure.last.edited" value="Project" />
@@ -60,8 +99,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPageTest">
-    <configuration name="AccountPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml">
+    <configuration name="AddressPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
       <extension name="coverage">
         <pattern>
@@ -70,7 +109,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.AccountPageTest" />
+      <option name="MAIN_CLASS_NAME" value="test.AddressPageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -88,17 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/newUser_addProductToCart.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumFrameworkPOM" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/newUser_addProductToCart.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryAddressDetailsPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFrameworkPOM" />
       <extension name="coverage">
         <pattern>
@@ -107,7 +136,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.LoginPageTest" />
+      <option name="MAIN_CLASS_NAME" value="test.DeliveryAddressDetailsPageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -132,13 +161,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductListPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFrameworkPOM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.ProductListPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginPageTest" />
         <item itemvalue="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/AllTest_FrameworkPOM.xml" />
-        <item itemvalue="TestNG.AccountPageTest" />
+        <item itemvalue="TestNG.ProductListPageTest" />
         <item itemvalue="TestNG.OrderConfirmedPageTest" />
-        <item itemvalue="TestNG.C:/Users/tomas/IdeaProjects/SeleniumFrameworkPOM/newUser_addProductToCart.xml" />
+        <item itemvalue="TestNG.DeliveryAddressDetailsPageTest" />
+        <item itemvalue="TestNG.AddressPageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +200,17 @@
       <updated>1587160468174</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

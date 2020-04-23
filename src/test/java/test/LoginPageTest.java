@@ -7,20 +7,19 @@ import org.testng.annotations.*;
 
 
 public class LoginPageTest extends TestBase {
+
+    /******* deklaracja obiektów ********/
     AccountPage accountPage;
     LoginPage loginPage;
 
-
+    /********* konstruktor ***********/
     public LoginPageTest() {
         super();
     }
 
-    //test cases should be separated -- independent with each other
-    //before each test case -- launch the browser and login
-    //@test -- execute test case
-    //after each test case -- close the browser
 
-    // Przed każdym testem uruchomienie przeglądarki
+
+    // Przed każdym testem uruchomienie przeglądarki wraz z zadeklarowanymi własnościami
     @BeforeMethod
     public void setUp() {
         initialization();
@@ -28,15 +27,20 @@ public class LoginPageTest extends TestBase {
         accountPage = new AccountPage();
 
         accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
+    }
 
+    // Po każdym teście zamknięcie przeglądarki
+    @AfterMethod
+    public void closeBrowser(){
+        driver.quit();
     }
 
 
 
+    /********* TESTY ***********/
     @Test(priority = 0)
     public void verifyPageTitle(){
-        accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
-        Assert.assertTrue(loginPage.getPageTitle().equals(testdata.getProperty("correctLoginPageTitle")));
+        Assert.assertTrue(loginPage.getPageTitle().equals(testdata.getProperty("correctAccountPageTitle")));
     }
 
 

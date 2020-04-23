@@ -13,22 +13,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class TestBase {
-
     public static WebDriver driver;
     public static WebDriverWait wait;
     public static Properties config;
     public static Properties testdata;
 
 
-
     public TestBase(){
         try {
-
             config = new Properties();
             FileInputStream file = new FileInputStream(System.getProperty("user.dir") +
                     "/src/main/java/config/config.properties");
@@ -54,50 +51,65 @@ public class TestBase {
 
 
     public static void initialization(){
-        String browserName = config.getProperty("browser");
+        DesiredCapabilities capabilities;
 
-        if(config.getProperty("browser").equalsIgnoreCase("chrome")){
+        String url = config.getProperty("URL");
+        String browser = config.getProperty("browser");
+        String pageLoadTimeout = config.getProperty("pageLoadTimeout");
+        String windowsMaximize = config.getProperty("windowsMaximize");
+        String deleteAllCookies = config.getProperty("deleteAllCookies");
+        String waitTimeout = config.getProperty("waitTimeout");
 
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
-                    "/src/main/resources/chromedriver.exe");
-            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--incognito");
-            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-            driver = new ChromeDriver(capabilities);
+        switch (browser) {
+            case "chrome":
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
+                        "/src/main/resources/chromedriver.exe");
+                capabilities = DesiredCapabilities.chrome();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--incognito");
+                capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
+                driver = new ChromeDriver(capabilities);
+                break;
+            case "firefox":
+                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
+                        "/src/main/resources/geckodriver.exe");
+
+                capabilities = DesiredCapabilities.firefox();
+                capabilities.setCapability("browser.privatebrowsing.autostart", true);
+                driver = new FirefoxDriver(capabilities);
+
+                break;
+            case "ie":
+                System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") +
+                        "/src/main/resources/IEDriverServer.exe");
+                capabilities = DesiredCapabilities.internetExplorer();
+                capabilities.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, true);
+                capabilities.setCapability(InternetExplorerDriver.IE_SWITCHES, "-private");
+
+                driver = new InternetExplorerDriver(capabilities);
+                break;
+            default:
+                throw new IllegalArgumentException("Nierozpoznano typu przeglądarki internetowej." +
+                        "Obsługiwane następujące opcje: chrome, firefox, ie");
         }
-        else if(config.getProperty("browser").equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
-                    "/src/main/resources/geckodriver.exe");
-            driver = new FirefoxDriver();
-        }
 
-        else if(config.getProperty("browser").equalsIgnoreCase("ie")){
-            System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") +
-                    "/src/main/resources/IEDriverServer.exe");
-            driver= new InternetExplorerDriver();
-        }
 
-        if(config.getProperty("deleteAllCookies").equalsIgnoreCase("true")) {
+        if(deleteAllCookies.equalsIgnoreCase("true")) {
             driver.manage().deleteAllCookies();
         }
-        if(config.getProperty("windowsMaximize").equalsIgnoreCase("true")){
+        if(windowsMaximize.equalsIgnoreCase("true")){
             driver.manage().window().maximize();
         }
 
+        driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(pageLoadTimeout), TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, Integer.parseInt(waitTimeout));
 
-
-
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, 20);
-
-        driver.get(config.getProperty("URL"));
+        driver.get(url);
 
     }
+
 
 
 

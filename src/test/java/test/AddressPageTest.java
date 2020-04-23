@@ -10,20 +10,33 @@ public class AddressPageTest extends TestBase{
     AccountPage accountPage;
     AddressPage addressPage;
 
+    /********* konstruktor ***********/
+    public AddressPageTest() {
+        super();
+    }
 
 
 
-    @BeforeTest
-    public void prepareTest(){
+    // Przed każdym testem uruchomienie przeglądarki wraz z zadeklarowanymi własnościami
+    @BeforeMethod
+    public void setUp() {
+        initialization();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
         addressPage = new AddressPage();
 
-        accountPage = loginPage.login(testdata.getProperty("userLogin"),testdata.getProperty("userPassword"));
+        accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
         addressPage = accountPage.goToAddresses();
     }
 
+    // Po każdym teście zamknięcie przeglądarki
+    @AfterMethod
+    public void closeBrowser(){
+        driver.quit();
+    }
 
+
+    /*********  TESTY *********/
     @Test(priority = 0)
     public void verifyNoDeliveryAddress() {
         Assert.assertTrue(addressPage.getInfoDeliveryAddress().equalsIgnoreCase

@@ -11,20 +11,35 @@ public class DeliveryAddressDetailsPageTest extends TestBase{
     AddressPage addressPage;
     DeliveryAddressDetailsPage deliveryAddressDetailsPage;
 
-    @BeforeTest
-    public void prepareTest(){
+
+    /********* konstruktor ***********/
+    public DeliveryAddressDetailsPageTest() {
+        super();
+    }
+
+
+
+    // Przed każdym testem uruchomienie przeglądarki wraz z zadeklarowanymi własnościami
+    @BeforeMethod
+    public void setUp() {
+        initialization();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
         addressPage = new AddressPage();
-        deliveryAddressDetailsPage = new DeliveryAddressDetailsPage();
 
         accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
         addressPage = accountPage.goToAddresses();
         deliveryAddressDetailsPage = addressPage.goToAddDeliveryAddress();
+    }
 
+    // Po każdym teście zamknięcie przeglądarki
+    @AfterMethod
+    public void closeBrowser(){
+        driver.quit();
     }
 
 
+    /*********  TESTY *********/
     @Test(priority = 0)
     public void addDeliveryAddress() {
         addressPage = deliveryAddressDetailsPage.fillForm("Jan","Testowy2","Polska",

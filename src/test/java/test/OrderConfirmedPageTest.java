@@ -12,16 +12,34 @@ public class OrderConfirmedPageTest extends TestBase {
     OrderConfirmedPage orderConfirmedPage;
 
 
-    @BeforeTest
-    public void prepareTest(){
+    /********* konstruktor ***********/
+    public OrderConfirmedPageTest() {
+        super();
+    }
+
+
+
+    // Przed każdym testem uruchomienie przeglądarki wraz z zadeklarowanymi własnościami
+    @BeforeMethod
+    public void setUp() {
+        initialization();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
         orderConfirmedPage = new OrderConfirmedPage();
 
-        accountPage = loginPage.login(testdata.getProperty("userLogin"),testdata.getProperty("userPassword"));
+        accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
         accountPage.goToOrders();
     }
 
+    // Po każdym teście zamknięcie przeglądarki
+    @AfterMethod
+    public void closeBrowser(){
+        driver.quit();
+    }
+
+
+
+    /*********  TESTY *********/
     @Test(priority = 0)
     public void verifyNoOrders(){
         Assert.assertTrue(orderConfirmedPage.getInfoAboutOrders().contains(testdata.getProperty("correctInfoAboutOrder")),

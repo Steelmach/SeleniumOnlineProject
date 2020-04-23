@@ -19,14 +19,34 @@ public class ProductListPageTest extends TestBase {
                     "KOSZULKA MANCHESTER UNITED", "KOSZULKA MANCHESTER FC CITY", "KOSZULKA LIVERPOOL FC", "KOSZULKA LEICESTER FC CITY"));
 
 
+
+    /********* konstruktor ***********/
+    public ProductListPageTest() {
+        super();
+    }
+
+
+
+    // Przed każdym testem uruchomienie przeglądarki wraz z zadeklarowanymi własnościami
     @BeforeMethod
-    public void prepareTest(){
+    public void setUp() {
+        initialization();
         homePage = new HomePage();
         productListPage = new ProductListPage();
 
         productListPage = homePage.goToProductPage();
     }
 
+
+    // Po każdym teście zamknięcie przeglądarki
+    @AfterMethod
+    public void closeBrowser(){
+        driver.quit();
+    }
+
+
+
+    /*********  TESTY *********/
     @Test(priority = 0)
     public void verifyProductNumber(){
         Assert.assertEquals(productListPage.getProductsNumber(),
