@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 
 public class DeliveryAddressDetailsPage extends TestBase {
 
@@ -45,18 +48,21 @@ public class DeliveryAddressDetailsPage extends TestBase {
     /****  metody  ****/
     // Wpisanie wartości tekstowej w pole Imię
     public void setName(String nameStr){
+        wait.until(visibilityOf(name));
         name.clear();
         name.sendKeys(nameStr);
     }
 
     // Wpisanie wartości tekstowej w pole Nazwisko
     public void setLastName(String lastNameStr){
+        wait.until(visibilityOf(lastName));
         lastName.clear();
         lastName.sendKeys(lastNameStr);
     }
 
     // Wpisanie wartości tekstowej w pole Region
     public void setCountry(String country){
+        wait.until(visibilityOf(arrowInputCountry));
         arrowInputCountry.click();
         inputCountry.sendKeys(country, Keys.ENTER);
 
@@ -64,24 +70,28 @@ public class DeliveryAddressDetailsPage extends TestBase {
 
     // Wpisanie wartości tekstowej w pole Ulica
     public void setAddress(String addressStr){
+        wait.until(visibilityOf(address));
         address.clear();
         address.sendKeys(addressStr);
     }
 
     // Wpisanie wartości tekstowej w pole Kod Pocztowy
     public void setPostcode(String postcodeStr){
+        wait.until(visibilityOf(postcode));
         postcode.clear();
         postcode.sendKeys(postcodeStr);
     }
 
     // Wpisanie wartości tekstowej w pole Miasto
     public void setCity(String cityStr){
+        wait.until(visibilityOf(city));
         city.clear();
         city.sendKeys(cityStr);
     }
 
     // Kliknięcie przycisku: Zapisz adres
     public void clickSaveAddressButton() {
+        wait.until(elementToBeClickable(saveAddressButton));
         saveAddressButton.click();
     }
 

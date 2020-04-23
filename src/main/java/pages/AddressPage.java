@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 
 public class AddressPage extends TestBase {
 
@@ -30,24 +32,18 @@ public class AddressPage extends TestBase {
     /****  metody  ****/
     // Przejście do strony z dodaniem/edytowaniem adresy dostowy
     public DeliveryAddressDetailsPage goToAddDeliveryAddress(){
+        wait.until(visibilityOf(addDeliveryAddress));
         addDeliveryAddress.click();
         return new DeliveryAddressDetailsPage();
     }
 
     // Pobranie i zwrócenie komunikatu dotyczącego istnienia adresy dostawy
    public String getInfoDeliveryAddress(){
+       wait.until(visibilityOf(infoDeliveryAddress));
        String message = infoDeliveryAddress.getText();
        System.out.println("Komunikat adres dostawy: " + message);
        return message;
    }
-
-    // Pobranie i zwrócenie adresu dostawy
-   public String getDeliveryAddress(){
-       String address = deliveryAddress.getText();
-       return address;
-   }
-
-
 
 
 }

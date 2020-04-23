@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 
 public class AccountPage extends TestBase {
 
@@ -29,6 +31,7 @@ public class AccountPage extends TestBase {
     /****  metody  ****/
     // Pobranie i zwrócenie nazwy konta (imie i nazwisko)
     public String getNameAccount(){
+        wait.until(visibilityOf(nameAccountLabel));
         String  nameAccount = nameAccountLabel.getText();
         System.out.println("Jesteś zalogowany jako: " + nameAccount);
         return nameAccount;
@@ -36,12 +39,14 @@ public class AccountPage extends TestBase {
 
     // Przejście na zakładkę Zamówienia (dotyczny zamówień potwierdzonych)
     public OrderConfirmedPage goToOrders(){
+        wait.until(visibilityOf(zamowieniaMenuBoczne));
         zamowieniaMenuBoczne.click();
         return new OrderConfirmedPage();
     }
 
     // Przejście na zakładkę Adresy
     public AddressPage goToAddresses(){
+        wait.until(visibilityOf(adresyMenuBoczne));
         adresyMenuBoczne.click();
         return new AddressPage();
     }

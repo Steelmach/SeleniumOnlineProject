@@ -5,12 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 
 public class HomePage  extends TestBase {
 
     /**** repozytorium elementów ****/
     @FindBy(xpath = "//a[@href='http://www.selenium-shop.pl/sklep/']")
     private WebElement shopMenu;
+
+    @FindBy(xpath = "//a[@href='http://www.selenium-shop.pl/moje-konto/']")
+    private WebElement myAccountMenu;
 
 
     /**** konstruktor ****/
@@ -22,15 +27,17 @@ public class HomePage  extends TestBase {
     /****  metody  ****/
     // Przejście na stronę sklepu z produktami
     public ProductListPage goToProductPage(){
+        wait.until(visibilityOf(shopMenu));
         shopMenu.click();
         return new ProductListPage();
     }
 
-    // Pobranie i zwrócenie aktualnego tytułu strony
-    public String getPageTitle(){
-        String title = driver.getTitle();
-        System.out.println("HomePage tytuł: " + title);
-        return title;
+
+    // Przejście na zakładkę Moje Konto - zakładka z logowaniem
+    public LoginPage goToLoginPage(){
+        wait.until(visibilityOf(myAccountMenu));
+        myAccountMenu.click();
+        return new LoginPage();
     }
 
 }

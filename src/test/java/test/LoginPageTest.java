@@ -9,6 +9,7 @@ import org.testng.annotations.*;
 public class LoginPageTest extends TestBase {
 
     /******* deklaracja obiektów ********/
+    HomePage homePage;
     AccountPage accountPage;
     LoginPage loginPage;
 
@@ -23,9 +24,11 @@ public class LoginPageTest extends TestBase {
     @BeforeMethod
     public void setUp() {
         initialization();
+        homePage = new HomePage();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
 
+        loginPage = homePage.goToLoginPage();
         accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
     }
 

@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfAllElements;
+
 public class ProductListPage extends TestBase {
 
     /**** repozytorium elementów ****/
@@ -31,6 +34,7 @@ public class ProductListPage extends TestBase {
     /****  metody  ****/
     // Pobranie i zwrócenie ilości produktów
     public int getProductsNumber() {
+        wait.until(visibilityOfAllElements(productsItems));
         int allProductsNumber = productsItems.size();
         return allProductsNumber;
     }

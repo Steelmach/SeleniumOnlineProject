@@ -33,12 +33,6 @@ public class LoginPage extends TestBase {
 
 
     /****  metody  ****/
-    // Przejście na zakładkę Moje Konto - zakładka z logowaniem
-    public LoginPage goToLoginPage(){
-        wait.until(visibilityOf(myAccountMenu));
-        myAccountMenu.click();
-        return new LoginPage();
-    }
 
     // Pobranie i zwrócienie aktualnego tytułu strony
     public String getPageTitle(){
@@ -70,7 +64,6 @@ public class LoginPage extends TestBase {
     // Metoda wykonująca pełną akcję logowania
     // zwracająca stronę AccountPage
     public AccountPage login(String login, String password){
-        goToLoginPage();
         setLoginInput(login);
         setPasswordInput(password);
         clickLoginButton();
