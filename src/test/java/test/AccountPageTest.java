@@ -6,6 +6,7 @@ import pages.*;
 import base.*;
 
 public class AccountPageTest extends TestBase {
+    HomePage homePage;
     LoginPage loginPage;
     AccountPage accountPage;
 
@@ -21,9 +22,11 @@ public class AccountPageTest extends TestBase {
     @BeforeMethod
     public void setUp() {
         initialization();
+        homePage = new HomePage();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
 
+        loginPage = homePage.goToLoginPage();
         accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
     }
 

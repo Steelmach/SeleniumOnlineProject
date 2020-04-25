@@ -1,6 +1,7 @@
 package pages;
 
 import base.TestBase;
+import extensions.Helpers;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,13 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 
-public class LoginPage extends TestBase {
-
+public class LoginPage extends TestBase{
+    Helpers helpers;
 
     /**** repozytorium elementów ****/
-    @FindBy(xpath = "//a[@href='http://www.selenium-shop.pl/moje-konto/']")
-    private WebElement myAccountMenu;
-
     @FindBy(id = "username")
     public WebElement loginInput;
 
@@ -28,6 +26,7 @@ public class LoginPage extends TestBase {
 
     /**** konstruktor ****/
     public LoginPage(){
+        helpers = new Helpers();
         PageFactory.initElements(driver, this);
     }
 
@@ -43,9 +42,7 @@ public class LoginPage extends TestBase {
 
     // Wpisanie wartości tekstowej w pole login
     public void setLoginInput(String login){
-        wait.until(visibilityOf(loginInput));
-        loginInput.clear();
-        loginInput.sendKeys(login);
+        helpers.setInput(loginInput,login);
     }
 
     // Wpisanie wartości tekstowej w pole password

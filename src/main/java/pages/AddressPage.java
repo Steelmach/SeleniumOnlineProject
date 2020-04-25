@@ -18,9 +18,6 @@ public class AddressPage extends TestBase {
     @FindBy(xpath = "//h3[contains(text(),'wysyłki')]//parent::*/a")
     private WebElement addDeliveryAddress;
 
-    @FindBy(xpath = "//h3[contains(text(),'wysyłki')]//parent::*/parent::*/address")
-    private WebElement deliveryAddress;
-
 
 
     /**** konstruktor ****/

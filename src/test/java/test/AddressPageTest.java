@@ -6,6 +6,7 @@ import pages.*;
 import base.*;
 
 public class AddressPageTest extends TestBase{
+    HomePage homePage;
     LoginPage loginPage;
     AccountPage accountPage;
     AddressPage addressPage;
@@ -21,10 +22,12 @@ public class AddressPageTest extends TestBase{
     @BeforeMethod
     public void setUp() {
         initialization();
+        homePage = new HomePage();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
         addressPage = new AddressPage();
 
+        loginPage = homePage.goToLoginPage();
         accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
         addressPage = accountPage.goToAddresses();
     }

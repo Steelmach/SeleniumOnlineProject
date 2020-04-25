@@ -40,6 +40,7 @@ public class LoginPageTest extends TestBase {
 
 
 
+
     /********* TESTY ***********/
     @Test(priority = 0)
     public void verifyPageTitle(){
