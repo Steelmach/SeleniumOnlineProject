@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/extent-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/GlobalMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reports/ExtentReporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/RaportZTestow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AllTest_FrameworkPOM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AllTest_FrameworkPOM.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SeleniumFrameworkPOM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AddressPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DeliveryAddressDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DeliveryAddressDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/OrderConfirmedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/OrderConfirmedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testdata/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testdata/testdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/DeliveryAddressDetailsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/DeliveryAddressDetailsPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/LoginPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/TestBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/extensions/Helpers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/AccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/AccountPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/AddressPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/AddressPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/DeliveryAddressDetailsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/DeliveryAddressDetailsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/OrderConfirmedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/OrderConfirmedPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/SeleniumFrameworkPOM.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/DeliveryAddressDetailsPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/DeliveryAddressDetailsPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/LoginPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test/LoginPageTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
