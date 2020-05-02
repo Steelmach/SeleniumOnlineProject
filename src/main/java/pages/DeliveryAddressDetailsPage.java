@@ -1,6 +1,7 @@
 package pages;
 
 import base.TestBase;
+import helpers.GlobalMethods;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +12,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 
 public class DeliveryAddressDetailsPage extends TestBase {
-
+    GlobalMethods globalMethods;
 
     /**** repozytorium elementów ****/
       @FindBy(id = "shipping_first_name")
@@ -41,26 +42,10 @@ public class DeliveryAddressDetailsPage extends TestBase {
 
     /**** konstruktor ****/
     public DeliveryAddressDetailsPage(){
+        globalMethods = new GlobalMethods();
         PageFactory.initElements(driver, this);
     }
 
-
-    /****  metody  ****/
-    // Wpisanie wartości tekstowej w pole Imię
-    public void setName(String nameStr){
-        wait.until(visibilityOf(name));
-        name.clear();
-        name.sendKeys(nameStr);
-    }
-
-    // Wpisanie wartości tekstowej w pole Nazwisko
-    public void setLastName(String lastNameStr){
-        wait.until(visibilityOf(lastName));
-        lastName.clear();
-        lastName.sendKeys(lastNameStr);
-    }
-
-    // Wpisanie wartości tekstowej w pole Region
     public void setCountry(String country){
         wait.until(visibilityOf(arrowInputCountry));
         arrowInputCountry.click();
@@ -68,44 +53,18 @@ public class DeliveryAddressDetailsPage extends TestBase {
 
     }
 
-    // Wpisanie wartości tekstowej w pole Ulica
-    public void setAddress(String addressStr){
-        wait.until(visibilityOf(address));
-        address.clear();
-        address.sendKeys(addressStr);
-    }
-
-    // Wpisanie wartości tekstowej w pole Kod Pocztowy
-    public void setPostcode(String postcodeStr){
-        wait.until(visibilityOf(postcode));
-        postcode.clear();
-        postcode.sendKeys(postcodeStr);
-    }
-
-    // Wpisanie wartości tekstowej w pole Miasto
-    public void setCity(String cityStr){
-        wait.until(visibilityOf(city));
-        city.clear();
-        city.sendKeys(cityStr);
-    }
-
-    // Kliknięcie przycisku: Zapisz adres
-    public void clickSaveAddressButton() {
-        wait.until(elementToBeClickable(saveAddressButton));
-        saveAddressButton.click();
-    }
-
+    /****  metody  ****/
     // Metoda wykonująca pełną akcję uzupełniania formularza adresy dostawy
     // zwracająca stronę AddressPage
     public AddressPage fillForm(String nameStr, String lastNameStr, String countryStr, String addressStr, String postcodeStr,
                          String cityStr) {
-        setName(nameStr);
-        setLastName(lastNameStr);
+        globalMethods.setInput(name,nameStr);
+        globalMethods.setInput(lastName, lastNameStr);
         setCountry(countryStr);
-        setAddress(countryStr);
-        setPostcode(postcodeStr);
-        setCity(cityStr);
-        clickSaveAddressButton();
+        globalMethods.setInput(postcode, postcodeStr);
+        globalMethods.setInput(city, cityStr);
+        globalMethods.clickButton(saveAddressButton);
+
         return new AddressPage();
     }
 

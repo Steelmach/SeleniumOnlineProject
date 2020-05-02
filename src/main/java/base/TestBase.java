@@ -3,6 +3,8 @@ package base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -11,9 +13,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -59,37 +65,59 @@ public class TestBase {
         String windowsMaximize = config.getProperty("windowsMaximize");
         String deleteAllCookies = config.getProperty("deleteAllCookies");
         String waitTimeout = config.getProperty("waitTimeout");
+        String grid = config.getProperty("GRID");
+
+
+
 
 
         switch (browser) {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
                         "/src/main/resources/chromedriver.exe");
-                capabilities = DesiredCapabilities.chrome();
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--incognito");
-                capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-                driver = new ChromeDriver(capabilities);
+                ChromeOptions options = new ChromeOptions();
+                options.setCapability(CapabilityType.VERSION, "81");
+                //options.setCapability(CapabilityType.PLATFORM_NAME, "WIN10");
+
+                if(grid.equalsIgnoreCase("true")) {
+
+                    try {
+
+                        driver = new RemoteWebDriver(new URL("http://192.168.0.117:4444/wd/hub"), options);
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                else {
+                    driver = new ChromeDriver(options);
+                }
                 break;
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
                         "/src/main/resources/geckodriver.exe");
 
-                capabilities = DesiredCapabilities.firefox();
-                capabilities.setCapability("browser.privatebrowsing.autostart", true);
-                driver = new FirefoxDriver(capabilities);
+                FirefoxOptions optionsff = new FirefoxOptions();
+
+                if(grid.equalsIgnoreCase("true")) {
+
+                    try {
+
+                        driver = new RemoteWebDriver(new URL("http://192.168.0.117:4444/wd/hub"), optionsff);
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                else {
+                    driver = new FirefoxDriver(optionsff);
+                }
 
                 break;
-            case "ie":
-                System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") +
-                        "/src/main/resources/IEDriverServer.exe");
-                capabilities = DesiredCapabilities.internetExplorer();
-                capabilities.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, true);
-                capabilities.setCapability(InternetExplorerDriver.IE_SWITCHES, "-private");
 
-                driver = new InternetExplorerDriver(capabilities);
-                break;
             default:
                 throw new IllegalArgumentException("Nierozpoznano typu przeglądarki internetowej." +
                         "Obsługiwane następujące opcje: chrome, firefox, ie");

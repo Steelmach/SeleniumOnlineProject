@@ -2,7 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="SeleniumFrameworkPOM">
+<suite name="SeleniumFrameworkPOMReports">
+
+    <listeners>
+    <listener class-name="reports.ExtentReporter" />
+</listeners>
 
     <test name="Test - Login Page">
         <classes>

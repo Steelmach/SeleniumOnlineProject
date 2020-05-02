@@ -1,4 +1,5 @@
 package test;
+import helpers.GlobalMethods;
 import pages.*;
 import base.*;
 
@@ -9,6 +10,7 @@ import org.testng.annotations.*;
 public class LoginPageTest extends TestBase {
 
     /******* deklaracja obiektów ********/
+    GlobalMethods globalMethods;
     HomePage homePage;
     AccountPage accountPage;
     LoginPage loginPage;
@@ -24,6 +26,7 @@ public class LoginPageTest extends TestBase {
     @BeforeMethod
     public void setUp() {
         initialization();
+        globalMethods = new GlobalMethods();
         homePage = new HomePage();
         loginPage = new LoginPage();
         accountPage = new AccountPage();
@@ -44,7 +47,7 @@ public class LoginPageTest extends TestBase {
     /********* TESTY ***********/
     @Test(priority = 0)
     public void verifyPageTitle(){
-        Assert.assertTrue(loginPage.getPageTitle().equals(testdata.getProperty("correctAccountPageTitle")));
+        Assert.assertTrue(globalMethods.getPageTitle().equals(testdata.getProperty("correctAccountPageTitle")));
     }
 
 
