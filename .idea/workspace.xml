@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/SeleniumFrameworkPOM.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chromedriver1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chromedriver1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chromedriver2.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Null/RaportZTestow.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/RaportZTestow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reports/ExtentReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reports/ExtentReporter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
