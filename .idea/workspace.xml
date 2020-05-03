@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver2.exe" beforeDir="false" />
-    </list>
+    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
