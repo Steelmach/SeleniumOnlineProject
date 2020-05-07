@@ -30,7 +30,7 @@ public class OrderConfirmedPageTest extends TestBase {
         orderConfirmedPage = new OrderConfirmedPage();
 
         loginPage = homePage.goToLoginPage();
-        accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
+        accountPage = loginPage.login(user, password);
         accountPage.goToOrders();
     }
 
@@ -39,9 +39,7 @@ public class OrderConfirmedPageTest extends TestBase {
     public void closeBrowser(){
         driver.quit();
     }
-
-
-
+    
     /*********  TESTY *********/
     @Test(priority = 0)
     public void verifyNoOrders(){

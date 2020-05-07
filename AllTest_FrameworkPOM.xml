@@ -15,6 +15,12 @@
     </test>
 
 
+    <test name="Test - Order Confirmation Page">
+        <classes>
+            <class name="test.OrderConfirmedPageTest"></class>
+        </classes>
+    </test>
+
 
 
 </suite>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="" />
+    <list default="true" id="f4fe0796-d09a-4816-9778-0471540126b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/AllTest_FrameworkPOM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AllTest_FrameworkPOM.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/AccountPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/AccountPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/AddressPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/AddressPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/DeliveryAddressDetailsPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/DeliveryAddressDetailsPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/OrderConfirmedPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/OrderConfirmedPageTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
