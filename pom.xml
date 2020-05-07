@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>SeleniumFrameworkPOM</groupId>
-    <artifactId>SeleniumFrameworkPOM</artifactId>
+    <groupId>SeleniumFrameworkPOMJenkins</groupId>
+    <artifactId>SeleniumFrameworkPOMJenkins</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -55,8 +55,31 @@
             <version>7.0.0</version>
             <scope>compile</scope>
         </dependency>
-
     </dependencies>
+
+   <build>
+  <plugins>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+          <configuration>
+              <systemPropertyVariables>
+                  <!--suppress UnresolvedMavenProperty -->
+                  <User>${User}</User>
+                  <!--suppress UnresolvedMavenProperty -->
+                  <Password>${Password}</Password>
+              </systemPropertyVariables>
+          <suiteXmlFiles>
+              <suiteXmlFile>AllTest_FrameworkPOM.xml</suiteXmlFile>
+          </suiteXmlFiles>
+      </configuration>
+      </plugin>
+  </plugins>
+   </build>
+
+
+
 
 
     <properties>

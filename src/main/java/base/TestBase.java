@@ -29,6 +29,8 @@ public class TestBase {
     public static Properties config;
     public static Properties testdata;
 
+    public static String user;
+    public static String password;
 
     public TestBase(){
         try {
@@ -68,6 +70,8 @@ public class TestBase {
         String grid = config.getProperty("GRID");
 
 
+        user = System.getProperty("User");
+        password = System.getProperty("Password");
 
 
 
