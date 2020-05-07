@@ -39,7 +39,7 @@ public class OrderConfirmedPageTest extends TestBase {
     public void closeBrowser(){
         driver.quit();
     }
-    
+
     /*********  TESTY *********/
     @Test(priority = 0)
     public void verifyNoOrders(){

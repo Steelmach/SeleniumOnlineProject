@@ -47,7 +47,7 @@ public class LoginPageTest extends TestBase {
     /********* TESTY ***********/
     @Test(priority = 0)
     public void verifyPageTitle(){
-        System.out.println("Zalogoany User: " + user);
+        System.out.println("Test zostanie wykonany na użytkowniku:" + user);
         Assert.assertTrue(globalMethods.getPageTitle().equals(testdata.getProperty("correctAccountPageTitle")));
     }
 
