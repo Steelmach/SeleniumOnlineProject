@@ -32,7 +32,7 @@ public class LoginPageTest extends TestBase {
         accountPage = new AccountPage();
 
         loginPage = homePage.goToLoginPage();
-        accountPage = loginPage.login(testdata.getProperty("userLogin"), testdata.getProperty("userPassword"));
+        accountPage = loginPage.login(user, password);
     }
 
     // Po każdym teście zamknięcie przeglądarki
@@ -47,6 +47,7 @@ public class LoginPageTest extends TestBase {
     /********* TESTY ***********/
     @Test(priority = 0)
     public void verifyPageTitle(){
+        System.out.println("Zalogoany User: " + user);
         Assert.assertTrue(globalMethods.getPageTitle().equals(testdata.getProperty("correctAccountPageTitle")));
     }
 
